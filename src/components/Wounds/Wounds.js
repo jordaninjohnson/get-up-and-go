@@ -1,5 +1,5 @@
-import WoundItem from './WoundItem';
-import Card from './Card';
+import WoundItem from './WoundItem.js';
+import Card from '../UI/Card.js';
 import './Wounds.css';
 function Wounds(props) {
     return (
