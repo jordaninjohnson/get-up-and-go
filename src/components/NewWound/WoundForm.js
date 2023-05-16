@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WoundForm.css';
 
-const WoundForm = () => {
+const WoundForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
@@ -63,7 +63,7 @@ const WoundForm = () => {
             date: new Date(enteredDate)
         };
 
-        console.log(woundData);
+        props.onSaveWoundData(woundData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');

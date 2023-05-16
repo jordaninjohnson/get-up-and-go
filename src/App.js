@@ -8,10 +8,16 @@ function App() {
     { title: 'burn', amount: 2, date: new Date() },
     { title: 'break', amount: 3, date: new Date() },
   ];
+  
+  const addWoundHandler = wound => {
+    console.log('In App.js');
+    console.log(wound);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <NewExpense />
+        <NewExpense onAddWound={addWoundHandler}/>
         <Wounds wounds={wounds} />
       </header>
     </div>

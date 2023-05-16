@@ -3,10 +3,17 @@ import React from 'react';
 import WoundForm from './WoundForm';
 import './NewWound.css';
 
-const NewWound = () => {
+const NewWound = (props) => {
+    const saveWoundDataHandler = (enteredWoundData) => {
+        const woundData = {
+            ...enteredWoundData,
+            id: Math.random().toString()
+        };
+        props.onAddWound(woundData);
+    }
     return (
         <div className="new-wound">
-        <WoundForm />
+        <WoundForm onSaveWoundData={saveWoundDataHandler}/>
         </div>
     );
 };
