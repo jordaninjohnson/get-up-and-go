@@ -14,7 +14,7 @@ function WoundItem(props) {
         <Card className="wound-item">
             <WoundDate date={props.date} />
             <div className="wound-item__description">
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
                 <div className='wound-item__price'>{props.amount}</div>
             </div>
             <button onClick={clickhandler}>Change Title</button>
