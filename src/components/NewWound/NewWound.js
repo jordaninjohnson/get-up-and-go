@@ -10,6 +10,7 @@ const NewWound = (props) => {
             id: Math.random().toString()
         };
         props.onAddWound(woundData);
+        // console.log(woundData);
     }
     return (
         <div className="new-wound">

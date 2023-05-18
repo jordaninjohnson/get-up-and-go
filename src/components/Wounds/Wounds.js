@@ -11,14 +11,18 @@ function Wounds(props) {
     };
     return (
         <div>
-        <Card className="wounds">
-        <WoundsFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
-            <WoundItem title={props.wounds[0].title} amount={props.wounds[0].amount} date={props.wounds[0].date}></WoundItem>
-            <WoundItem title={props.wounds[1].title} amount={props.wounds[1].amount} date={props.wounds[1].date}></WoundItem>
-            <WoundItem title={props.wounds[2].title} amount={props.wounds[2].amount} date={props.wounds[2].date}></WoundItem>
-        </Card>
+            <Card className="wounds">
+                <WoundsFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+                {props.items.map((wound) => (
+                    <WoundItem
+                        title={wound.title}
+                        amount={wound.amount}
+                        date={wound.date}
+                    />
+                ))}
+            </Card>
         </div>
     );
-}
+};
 
 export default Wounds;
