@@ -5,9 +5,9 @@ import NewExpense from './components/NewWound/NewWound';
 import NewWound from './components/NewWound/NewWound';
 
 const DUMMY_WOUNDS = [
-  { title: 'cut', amount: 1, date: new Date() },
-  { title: 'burn', amount: 2, date: new Date() },
-  { title: 'break', amount: 3, date: new Date() },
+  { id:'1', title: 'cut', amount: 1, date: new Date() },
+  { id:'2', title: 'burn', amount: 2, date: new Date() },
+  { id:'3', title: 'break', amount: 3, date: new Date() },
 ];
 
 function App() {

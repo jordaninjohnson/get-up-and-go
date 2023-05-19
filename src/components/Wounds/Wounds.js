@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-import WoundItem from './WoundItem.js';
+import WoundsList from './WoundsList.js';
 import Card from '../UI/Card.js';
 import WoundsFilter from './WoundsFilter.js';
 import './Wounds.css';
@@ -9,18 +8,22 @@ function Wounds(props) {
     const filterChangeHandler = selectedYear => {
         setFilteredYear(selectedYear);
     };
+
+    const filteredWounds = props.items.filter(wound => {
+        return wound.date.getFullYear().toString() === filteredYear;
+    });
+
     return (
         <div>
-            <Card className="wounds">
-                <WoundsFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-                {props.items.map((wound) => (
-                    <WoundItem
-                        title={wound.title}
-                        amount={wound.amount}
-                        date={wound.date}
+            <li>
+                <Card className="wounds">
+                    <WoundsFilter
+                        selected={filteredYear}
+                        onChangeFilter={filterChangeHandler}
                     />
-                ))}
-            </Card>
+                    <WoundsList items={filteredWounds} />
+                </Card>
+            </li>
         </div>
     );
 };

@@ -1,0 +1,9 @@
+.wounds-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .wounds-list__fallback {
+    color: white;
+    text-align: center;
+  }

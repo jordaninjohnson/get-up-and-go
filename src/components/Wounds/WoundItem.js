@@ -17,7 +17,7 @@ function WoundItem(props) {
                 <h2>{props.title}</h2>
                 <div className='wound-item__price'>{props.amount}</div>
             </div>
-            <button onClick={clickhandler}>Change Title</button>
+            {/* <button onClick={clickhandler}>Change Title</button> */}
         </Card>
     );
 }
