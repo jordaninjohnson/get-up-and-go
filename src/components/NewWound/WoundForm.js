@@ -59,7 +59,7 @@ const WoundForm = (props) => {
 
         const woundData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
 
